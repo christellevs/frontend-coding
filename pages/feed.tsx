@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import * as API from "../utils/api";
-import { PostProps, CommentProps } from "../utils/props";
+import { PostProps } from "../utils/props";
 import Post from "../components/Post";
 import Typography from "@mui/material/Typography";
 
@@ -18,6 +18,7 @@ const Feed: NextPage = () => {
 
   // TODO - remove later
   console.log("posts: ", posts);
+
   return (
     <div className="post-container">
       <Typography align="center" variant="h2">
