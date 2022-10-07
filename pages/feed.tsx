@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import * as API from "../utils/api";
 import { PostProps } from "../utils/props";
+import Post from "../components/Post";
+import Typography from "@mui/material/Typography";
 
 const Feed: NextPage = () => {
   const [posts, setPosts] = useState<PostProps[]>([]);
@@ -18,9 +20,12 @@ const Feed: NextPage = () => {
   // TODO - remove later
   console.log("posts: ", posts);
   return (
-    <div>
+    <div className="post-container">
+      <Typography align="center" variant="h2">
+        Posts
+      </Typography>
       {posts.map((post) => (
-        <p>{post.body}</p>
+        <Post title={post.title} body={post.body} />
       ))}
     </div>
   );
