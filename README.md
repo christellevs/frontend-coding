@@ -1,5 +1,28 @@
 # frontend-coding
 
+## Overview:
+
+Overall I've taken 2.5h for the challenge.
+
+Due to the nature of the challenge being a couple of hours only. I've prioritized functionality over looks for now.
+If this was a real case scenario, I would take more time and attention on styling.
+
+If I had 6 hours for this challenge instead of 2-3h I would:
+
+- Improve error handling, especially around the api functionality.
+- Add Jest testing for api functionality.
+- Add Navigation with React Router.
+- Add a better state management such as Redux or Context.
+- Improve upon styling, colours, alignment, etc.
+
+If I had an extra 2 full hours, I would aim for full test coverage with Jest testing.
+
+<br>
+
+I've enjoyed working on this challenge. Thank you for the opportunity to join the team at Fanvue.
+
+# Original README below:
+
 Setup the project:
 
 Make sure you install all the dependencies (currently yarn, but you can opt-out) and start the solution in dev mode.
