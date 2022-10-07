@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import * as API from "../utils/api";
-import { PostProps } from "../utils/props";
+import { PostProps, CommentProps } from "../utils/props";
 import Post from "../components/Post";
 import Typography from "@mui/material/Typography";
 
@@ -10,10 +10,9 @@ const Feed: NextPage = () => {
 
   useEffect(() => {
     const getPosts = async () => {
-      const resPost = await API.getAllPosts();
-      setPosts(resPost);
+      const resPosts = await API.getAllPosts();
+      setPosts(resPosts);
     };
-
     getPosts();
   }, []);
 
@@ -25,7 +24,7 @@ const Feed: NextPage = () => {
         Posts
       </Typography>
       {posts.map((post) => (
-        <Post title={post.title} body={post.body} />
+        <Post {...post} />
       ))}
     </div>
   );
