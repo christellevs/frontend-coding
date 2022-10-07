@@ -24,9 +24,11 @@ const Feed: NextPage = () => {
       <Typography align="center" variant="h2">
         Posts
       </Typography>
-      {posts.map((post) => (
-        <Post {...post} />
-      ))}
+      {posts.length > 0 ? (
+        posts.map((post) => <Post {...post} />)
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
