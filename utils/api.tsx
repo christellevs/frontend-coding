@@ -15,7 +15,11 @@ export const getCommentsByPost = async (postId: number) =>
     (data) => data.json()
   );
 
+/*
+  get all images from an album as 5000 imgs was timing out.
+  If done in real project, i'd work on pagination
+*/
 export const getAllImages = async () =>
-  fetch(`${api}/photos`, { headers, method: "GET" }).then((data) =>
+  fetch(`${api}/albums/1/photos`, { headers, method: "GET" }).then((data) =>
     data.json()
   );
