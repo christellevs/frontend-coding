@@ -14,3 +14,8 @@ export const getCommentsByPost = async (postId: number) =>
   fetch(`${api}/posts/${postId}/comments`, { headers, method: "GET" }).then(
     (data) => data.json()
   );
+
+export const getAllImages = async () =>
+  fetch(`${api}/photos`, { headers, method: "GET" }).then((data) =>
+    data.json()
+  );

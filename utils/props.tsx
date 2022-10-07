@@ -12,3 +12,11 @@ export type CommentProps = {
   email: string;
   body: string;
 };
+
+export type ImageProps = {
+  albumId: number;
+  id: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
+};
